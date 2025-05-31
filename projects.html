@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Pavy Beloiu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"></div>
+            <h1>Pavy Beloiu</h1>
+          </a>
+
+          <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul id="nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html" class="active">Projects</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1 class="section-title">Projects</h1>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoVRtekWqhYZMNdm5vXkl2t5TWNRZF1P1FgIFBIn_EF7CBPTUPQrNGbN5PF8DF345EhWoEPLK3Sg2Iq1ewcFQCAfYRvzL943DWE0-w1ZQT0AfGUBUpvy6qWxnV82HCv4dRcFUfn97lyhwb7qR4MRaphd5ipOuxZm2SLIWtkzTtIvDKgnaWIq1RcxTvAPxpYNPR41YqCg6r2_5DwY097ty_2GymsFve_i5X2-U3NmIj4Eo2X65oRgTdD9Tp19FpzZM3T4qz1rhFTII');
+              "></div>
+            <div class="project-content">
+              <h3>Exploring the Intersection of Art and Mathematics</h3>
+              <p>
+                A deep dive into how mathematical principles influence artistic
+                composition and visual aesthetics.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzxiDaBQVgMHGDmLzkd1qLSjcIZLhCf_LugJKXxhMt8HzJxOGEa5keZS00IipKQLDDzdKhxp_nhO2-n0LWelozgwcDOPBSv4hzBpzsmlKKVCxU_Z9WlLjJoPndW2DD2x4VN2F2kFezOJPVj3B5ozOEpPkGCPDeOPayWzjgyD8sN6JI4q0-pHo80vN9VCE43jPY_J_9S9CTi6NrQ2WAi2BC5tIWwALrDCq_GKZJ8V0iK15Cc6iTEMtE1C_xuDqVhg7vn0NeJtUofB0');
+              "></div>
+            <div class="project-content">
+              <h3>Collaborative Projects with the City of Cimpul Lung</h3>
+              <p>
+                A showcase of collaborative projects with the City of Cimpul
+                Lung, focusing on community development and cultural
+                initiatives.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+
+          <!-- Additional Project Example -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              "></div>
+            <div class="project-content">
+              <h3>Sustainable Engineering Solutions</h3>
+              <p>
+                Innovative approaches to environmental challenges through
+                interdisciplinary engineering and design thinking.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+
+          <!-- Literary Project -->
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="
+                background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+              "></div>
+            <div class="project-content">
+              <h3>Contemporary Literature Collection</h3>
+              <p>
+                A curated collection of contemporary literary works exploring
+                themes of technology, identity, and human connection.
+              </p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+        <p>&copy; 2024 Pavy Beloiu. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("nav-menu");
+        menu.classList.toggle("active");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("nav-menu");
+        const toggle = document.querySelector(".menu-toggle");
+
+        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+          menu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavy Beloiu - Modern Polymath</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <div class="logo-icon"></div>
+            <h1>Pavy Beloiu</h1>
+          </a>
+
+          <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul id="nav-menu">
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+          <h1>Pavy Beloiu</h1>
+          <p>
+            A modern-day polymath exploring the intersections of art,
+            engineering, literature, and research.
+          </p>
+          <a href="projects.html" class="btn">Explore My Work</a>
+        </section>
+
+        <!-- Featured Project -->
+        <section>
+          <h2 class="section-title">Featured Project</h2>
+          <div class="project-card">
+            <div
+              class="project-image"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOapnT1x7bfmbpohewNYTbd7P_da3_hYKNFFp2xyE4Um8aJxy2Mq7Cn8mG-7F7_YovkzuxndDkw2-bZ_C2XJ3EdMh1NvV5SRDnovwruvkRp6OTpMl2OuXQ6grE484m-17ZPpSB6HrNDihPVIg8fDjJjKm1ev9qIwTB-itQ65qyN2yrLeyqFukD475V47fedvnpYOPRVu2TOeVxruX5Y6pH5BwNAROFVkhlvPH1Uvt01W6klYRs9kwhNdsXRwu9F82e_f5m4b6zEJE');
+              "></div>
+            <div class="project-content">
+              <h3>Interdisciplinary Fusion</h3>
+              <p>
+                A project blending art, engineering, and literature to create an
+                interactive installation.
+              </p>
+              <a href="projects.html" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Latest Updates -->
+        <section>
+          <h2 class="section-title">Latest Updates</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>New Art Series: "Chromatic Echoes"</h3>
+              <p>
+                Published a new series of abstract art exploring color and form.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h3>Engineering Workshop Announcement</h3>
+              <p>
+                Announcing an upcoming workshop on sustainable engineering
+                solutions.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h3>Literary Reading Event</h3>
+              <p>
+                Hosting a reading event featuring excerpts from recent literary
+                works.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="social-links">
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="LinkedIn">💼</a>
+        </div>
+        <p>&copy; 2024 Pavy Beloiu. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("nav-menu");
+        menu.classList.toggle("active");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("nav-menu");
+        const toggle = document.querySelector(".menu-toggle");
+
+        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
+          menu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>
