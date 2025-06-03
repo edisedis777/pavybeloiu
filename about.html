@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- <link rel="icon" type="image/png" href="pavy-icon.png" /> -->
+    <link rel="icon" type="image/png" href="images/pavy.png" />
   </head>
   <body>
     <!-- Skip to main content for accessibility -->
@@ -73,26 +73,11 @@
       </section>
 
       <section class="content">
-        <!-- 
-          Image styling: Floated left, with right/bottom margins for text spacing, 
-          a max-width to keep it reasonably sized, and rounded corners for a softer look.
-          For maintainability, these styles could be moved to your styles.css file 
-          and applied via the 'article-image' class or a new specific class.
-        -->
         <img
           src="images/pavy.png"
           alt="A photograph of Pavy Beloiu"
-          class="article-image"
-          style="
-            float: left;
-            margin-right: 20px;
-            margin-bottom: 10px;
-            max-width: 200px;
-            border-radius: 8px;
-          " />
-
+          class="article-image about-page-image" />
         <p>
-          <!-- This paragraph will now wrap nicely around the floated image. -->
           Pavy Beloiu is from Câmpulung Muscel and descendant of 6 generations
           of Moldovan priests (his father, Mihai Beloiu, was the last).
           Passionate about art and history, he sought to bring to light events
@@ -102,9 +87,7 @@
           friends in the country.
         </p>
 
-        <!-- The 'clear: left' style ensures this paragraph starts below the floated image. -->
-        <!-- The 'margin-top' provides spacing. This could also be part of a CSS class. -->
-        <p class="contact-info" style="clear: left; margin-top: 20px">
+        <p class="contact-info clear-after-image">
           If you wish to contact me, feel free to write an email to:
           <a href="mailto:your.email@example.com">email@example.com</a>
         </p>
@@ -120,7 +103,6 @@
         </p>
       </footer>
     </main>
-
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
