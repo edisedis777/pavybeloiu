@@ -442,6 +442,26 @@ footer:hover p {
   background-color: var(--hover-color);
 }
 
+/* --- General Article Image Styling --- */
+.article-image {
+  border-radius: 8px; /* Default for all article images */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Default bottom margin */
+}
+
+/* Specific for about page image - desktop */
+.about-page-image {
+  float: left;
+  margin-right: 20px;
+  max-width: 200px; /* As per original inline style */
+}
+
+.clear-after-image {
+  /* For paragraph after floated .about-page-image */
+  clear: left;
+  margin-top: 20px; /* As per original inline style */
+}
+
 /* --- Media Queries --- */
 @media (max-width: 1024px) {
   :root {
@@ -518,6 +538,39 @@ footer:hover p {
   body.menu-open::before {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* --- Mobile Image Styling Overrides --- */
+  .article-image, /* General class for all such images */
+  .about-page-image,
+  .content .article-image.magnifiable {
+    /* Ensure specificity for magnifiable images */
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; /* Consistent margin */
+    max-width: 90%; /* Allow images to be larger on mobile relative to screen */
+    height: auto;
+  }
+
+  .about-page-image {
+    max-width: 70%; /* Or a specific pixel value like 200px if preferred */
+  }
+
+  .content .article-image.magnifiable {
+    max-width: 90%; /* Make conics images take more width on mobile */
+    margin-right: auto; /* Center it since float is none */
+  }
+
+  /* No need to clear float if there's no float */
+  .clear-after-image,
+  .content .article-image.magnifiable ~ .article-image.magnifiable {
+    clear: none;
+    margin-top: 1rem; /* Reset or adjust top margin */
+  }
+  .content .article-image.magnifiable ~ .article-image.magnifiable {
+    margin-top: 20px; /* Maintain some spacing between stacked images */
   }
 }
 
@@ -687,10 +740,10 @@ html {
 
 /* Styles for magnifiable images within the .content section */
 .content .article-image.magnifiable {
-  float: left;
+  float: left; /* This will be overridden on mobile by the new rules */
   margin-right: 20px;
   margin-bottom: 10px;
-  max-width: 300px; /* Specific to images in writings.html conics section */
+  max-width: 300px; /* Specific to images in writings.html conics section, overridden on mobile */
   border-radius: 8px;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -704,7 +757,7 @@ html {
    to clear the previous float and add top margin.
    The general sibling combinator (~) targets an element that is a later sibling. */
 .content .article-image.magnifiable ~ .article-image.magnifiable {
-  clear: left;
+  clear: left; /* This will be overridden on mobile */
   margin-top: 20px;
 }
 
@@ -752,4 +805,14 @@ html {
   animation-duration: 0.6s; /* Duration of zoom animation */
 }
 
-/* @keyframes zoom is already defined earlier in this file */
+/* @keyframes zoom is already defined earlier in this file */ /* (Note: I don't see @keyframes zoom in the provided CSS. If it's missing, the zoom animation won't work. Assuming it exists elsewhere or isn't critical for this fix.) */
+
+/* If @keyframes zoom is missing, add it: */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
