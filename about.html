@@ -3,139 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Pavy Beloiu</title>
+    <meta
+      name="description"
+      content="About Pavel (Pavy) Beloiu, his background, and his passion for art, history, and mathematics." />
+    <title>Pavy Beloiu | About Me</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="icon" type="image/png" href="pavy-icon.png" /> -->
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <a href="index.html" class="logo">
-            <div class="logo-icon"></div>
-            <h1>Pavy Beloiu</h1>
-          </a>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
 
-          <nav>
-            <button class="menu-toggle" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <ul id="nav-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="projects.html">Projects</a></li>
-              <li><a href="about.html" class="active">About</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+    <!-- Mobile Menu Toggle -->
+    <button
+      class="menu-toggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="side-panel">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M3 12H21"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round" />
+        <path
+          d="M3 6H21"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round" />
+        <path
+          d="M3 18H21"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round" />
+      </svg>
+    </button>
 
-    <main>
-      <div class="container">
-        <h1 class="section-title">About Pavy Beloiu</h1>
-        <p style="font-size: 1.1rem; color: #666; margin-bottom: 3rem">
-          A modern-day polymath, seamlessly blending art, engineering,
-          literature, and research into a cohesive and impactful body of work.
+    <!-- Side Panel -->
+    <aside class="side-panel" id="side-panel">
+      <h1>
+        <a
+          href="index.html"
+          style="color: inherit; text-decoration: none"
+          aria-label="Pavy Beloiu's Homepage"
+          >Pavy Beloiu</a
+        >
+      </h1>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="writings.html">Writings</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <section class="section-title">
+        <h2>About Me</h2>
+      </section>
+
+      <section class="content">
+        <!-- 
+          Image styling: Floated left, with right/bottom margins for text spacing, 
+          a max-width to keep it reasonably sized, and rounded corners for a softer look.
+          For maintainability, these styles could be moved to your styles.css file 
+          and applied via the 'article-image' class or a new specific class.
+        -->
+        <img
+          src="images/pavy.png"
+          alt="A photograph of Pavy Beloiu"
+          class="article-image"
+          style="
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            max-width: 200px;
+            border-radius: 8px;
+          " />
+
+        <p>
+          <!-- This paragraph will now wrap nicely around the floated image. -->
+          Pavy Beloiu is from Câmpulung Muscel and descendant of 6 generations
+          of Moldovan priests (his father, Mihai Beloiu, was the last).
+          Passionate about art and history, he sought to bring to light events
+          and stories lost and unknown to today's readers. He combined
+          engineering with painting and, later, with writing and mathematics. He
+          left for America in 2001 and misses his birthplace, but also his
+          friends in the country.
         </p>
 
-        <div class="about-section">
-          <h2>Biography</h2>
-          <p>
-            Born in the heart of Europe, Pavy's journey began with a fascination
-            for both the arts and sciences. He pursued formal education in
-            mechanical engineering while simultaneously honing his artistic
-            skills through independent study and apprenticeships. This dual path
-            led him to a unique perspective, where technical precision informs
-            artistic expression, and creative thinking drives engineering
-            innovation.
-          </p>
-        </div>
-
-        <div class="about-section">
-          <h2>Philosophy</h2>
-          <p>
-            Pavy's philosophy is rooted in the belief that true progress comes
-            from interdisciplinary collaboration and a holistic understanding of
-            the world. He advocates for a 'renaissance' approach to
-            problem-solving, where diverse perspectives are valued and
-            integrated.
-          </p>
-        </div>
-
-        <div class="about-section">
-          <h2>Contact</h2>
-          <p style="margin-bottom: 1.5rem">
-            Interested in collaboration or have questions about my work? I'd
-            love to hear from you.
-          </p>
-
-          <form class="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
+        <!-- The 'clear: left' style ensures this paragraph starts below the floated image. -->
+        <!-- The 'margin-top' provides spacing. This could also be part of a CSS class. -->
+        <p class="contact-info" style="clear: left; margin-top: 20px">
+          If you wish to contact me, feel free to write an email to:
+          <a href="mailto:your.email@example.com">email@example.com</a>
+        </p>
+      </section>
+      <!-- Footer -->
+      <footer>
+        <p>
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Pavy Beloiu. All rights reserved.
+        </p>
+      </footer>
     </main>
 
-    <footer>
-      <div class="container">
-        <div class="social-links">
-          <a href="#" aria-label="Twitter">🐦</a>
-          <a href="#" aria-label="Instagram">📷</a>
-          <a href="#" aria-label="LinkedIn">💼</a>
-        </div>
-        <p>&copy; 2024 Pavy Beloiu. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("nav-menu");
-        menu.classList.toggle("active");
-      }
-
-      // Close menu when clicking outside
-      document.addEventListener("click", function (event) {
-        const menu = document.getElementById("nav-menu");
-        const toggle = document.querySelector(".menu-toggle");
-
-        if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-          menu.classList.remove("active");
-        }
-      });
-
-      function handleSubmit(event) {
-        event.preventDefault();
-
-        // Get form data
-        const formData = new FormData(event.target);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const message = formData.get("message");
-
-        // Simple validation and feedback
-        if (name && email && message) {
-          alert("Thank you for your message! I'll get back to you soon.");
-          event.target.reset();
-        } else {
-          alert("Please fill in all fields.");
-        }
-      }
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
